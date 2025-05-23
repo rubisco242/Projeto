@@ -118,7 +118,7 @@ try {
     $conteudo = implode(PHP_EOL, $registos) . PHP_EOL;
     file_put_contents($outputFile, mb_convert_encoding($conteudo, 'ISO-8859-1'));
 
-    echo "✅ Ficheiro SGL_V2 gerado com sucesso: $outputFile" . PHP_EOL;
+    echo "Ficheiro SGL_V2 gerado com sucesso: $outputFile" . PHP_EOL;
 
 } catch (\PhpOffice\PhpSpreadsheet\Reader\Exception $e) {
     echo "Erro ao ler o ficheiro Excel: " . $e->getMessage();
