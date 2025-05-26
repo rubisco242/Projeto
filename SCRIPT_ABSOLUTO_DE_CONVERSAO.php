@@ -37,7 +37,7 @@ try {
     $dataAtual = null;
 
     // === Nomes genéricos dos canais (6 canais) ===
-    $nomesCanais = ['A+', 'Ri+', 'Rc-', 'A-', 'Ri-', 'Rc+'];
+    $nomesCanais = ['A+', 'Ri+', 'Rc-'];
     // Remove nomes vazios ou espaços
     $nomesCanais = array_filter($nomesCanais, fn($nome) => trim($nome) !== '');
 
