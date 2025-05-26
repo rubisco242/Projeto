@@ -73,6 +73,7 @@ try {
             $valor = isset($row[$c]) ? $row[$c] : 0;
             $linha[] = formatEnergia($valor);
             $linha[] = '0';
+            $linha[] = '000000000000.000';
         }
 
         $registos20[] = implode("\t", $linha);
