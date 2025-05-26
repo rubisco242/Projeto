@@ -37,12 +37,12 @@ try {
     $dataAtual = null;
 
     // === Nomes genéricos dos canais (6 canais) ===
-    $nomesCanais = ['A+', 'Ri+', 'Rc-'];
-    // Remove nomes vazios ou espaços
-    $nomesCanais = array_filter($nomesCanais, fn($nome) => trim($nome) !== '');
+// === Detectar dinamicamente os nomes dos canais a partir do cabeçalho ===
+$cabecalho = $rows[0]; // primeira linha do Excel
+$nomesCanais = array_slice($cabecalho, 2); // ignora as colunas de Data e Hora
+$nomesCanais = array_filter($nomesCanais, fn($nome) => trim($nome) !== '');
+$numCanais = count($nomesCanais);
 
-    // === Número total de canais ===
-    $numCanais = count($nomesCanais);
 
     // === REGISTO 20 ===
     $registos20 = [];
